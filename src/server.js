@@ -4,6 +4,8 @@ const app = express();
 
 conFigViewEngine(app);
 
+const view = 'hello'
+
 
 app.get('/', (req, res) => {
     res.send('Hello, World!');
@@ -14,3 +16,4 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   printColoredConsole('violet', 'Server Running --->  listening on port ' +  port);
 });
+//hêlo
