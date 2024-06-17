@@ -11,6 +11,6 @@ app.get('/', (req, res) => {
 
 
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   printColoredConsole('violet', 'Server Running --->  listening on port ' +  port);
 });
