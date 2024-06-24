@@ -10,24 +10,29 @@ const User = sequelize.define('User', {
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
+    allowNull: true,
+    unique: false,
+    
   },
-  sdt: {
+  phoneNumber: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    allowEmpty: true
+  },
+  fullName: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    
+  },
+  password: {
     type: DataTypes.STRING,
     allowNull: false,
-  },
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  mpassword: {
-    type: DataTypes.STRING,
-    allowNull: false,
+    
   },
   typePassword: {
-    type: DataTypes.STRING,
+    type: DataTypes.ENUM('admin', 'user', 'shipper'),
     allowNull: false,
+    defaultValue : 'user'
   },
   createdAt: {
     type: DataTypes.DATE,

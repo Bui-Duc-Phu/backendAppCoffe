@@ -1,4 +1,4 @@
-const path = require('path')
+
 const express = require('express')
 var morgan = require('morgan')
 
@@ -6,7 +6,6 @@ var morgan = require('morgan')
 
 const conFigViewEngiine = (app , ) => {  
     require('dotenv').config()
-
     app.use(morgan('combined'))
 
 
