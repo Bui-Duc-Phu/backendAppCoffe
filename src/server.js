@@ -3,15 +3,15 @@ const { port, hostname, printColoredConsole, conFigViewEngine, express,sequelize
 const app = express();
 conFigViewEngine(app);
 
-const {router_SignUp} = require('./routers/signUpRoute')
+const {authRouter} = require('./routers/authRouter')
 
 
 
 
-app.use("/auth", router_SignUp);
+app.use("/auth", authRouter);
 
 
-// Đồng bộ hóa model
+
 sequelize.sync()
   .then(() => {
     app.listen(port, () => {
