@@ -6,7 +6,7 @@ const codeRandom = require("../../utils/codeRandom");
 const verification = async (req, res) => {
     const { email } = await req.body
     let code = codeRandom(4)
-    console.log('email sdsd : ', email)
+    console.log('email sdsd --------------------: ', email)
 
     if (email) {
         sendMail(email, code)
@@ -16,7 +16,6 @@ const verification = async (req, res) => {
                     data: { code: code }
                 })
                 console.log(infor)
-
             })
             .catch(error => {
                 res.status(403).json({

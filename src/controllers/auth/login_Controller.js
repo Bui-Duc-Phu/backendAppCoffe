@@ -13,6 +13,7 @@ const loginController = async (req, res) => {
     const { email, password } = req.body;
 
     const existingUser = await User.findOne({ where: { email } });
+    console.log("sdsdsdsdsdsdsd--------",existingUser.dataValues)
 
     if (!existingUser) {
       return res.status(401).json({ message: 'Invalid email or password' });
